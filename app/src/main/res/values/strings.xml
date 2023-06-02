@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">MCT</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_profile">Profile</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="login_lbl_phone">Phone Number</string>
+    <string name="login_lbl_email">Email Address</string>
+    <string name="login_lbl_verify_code">Verification Code </string>
+    <string name="login_lbl_code">S Code</string>
+    <string name="login_hint_phone"><font size="12">Enter Phone No</font></string>
+    <string name="login_hint_email"><font size="12">Enter Email</font></string>
+    <string name="login_hint_code"><font size="12">Enter Code</font></string>
+
+    <string name="login_lbl_password">Password</string>
+    <string name="login_lbl_confirm_password">Confirm Password</string>
+    <string name="login_hint_password"><font size="12"> Enter Password </font></string>
+    <string name="login_hint_confirm_password"><font size="12"> Enter Confirm Password </font></string>
+    <string name="lbl_forget_password"><u><i>Forgot Password</i></u></string>
+    <string name="lbl_do_not_acc"><u><i>Don\'t have an account. Register here.</i></u></string>
+    <string name="account_registration">Account Registration</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="back"><u>Back</u></string>
+    <string name="lbl_has_reg_acc"><u><i>Already have an account? Login.</i></u></string>
+    <string name="title_home">Home</string>
+    <string name="title_profile">Profile</string>
+    <string name="PoorConnection">Poor Connection</string>
+    <string name="login_by_phone">Login By Phone</string>
+    <string name="login_by_email">Login By Email</string>
+    <string name="lbl_get_code">Get Code</string>
+
+    <string name="lbl_name">Name</string>
+    <string name="lbl_phone">Phone</string>
+
+</resources>

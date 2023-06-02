@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".presentation.account.profile.ProfileFragment">
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lblProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_14"
+                android:layout_marginTop="@dimen/margin_30"
+                android:text="Profile"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/regular_text_20"
+                android:textStyle="bold"
+                />
+
+            <!--name-->
+            <TextView
+                android:id="@+id/lblName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblProfile"
+                android:layout_marginLeft="@dimen/margin_14"
+                android:layout_marginTop="@dimen/margin_14"
+                android:text="@string/lbl_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/regular_text" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etProfileName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editext_size"
+                android:layout_below="@id/lblName"
+                android:layout_marginLeft="@dimen/margin_14"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_14"
+                android:paddingLeft="@dimen/margin_8"
+                android:background="@drawable/rectangle_shape"
+                android:text="John"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:enabled="true"
+                android:paddingTop="@dimen/margin_4"
+                android:textSize="@dimen/regular_text"
+                android:textColor="@color/black"/>
+
+            <!--phone-->
+            <TextView
+                android:id="@+id/lblPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_14"
+                android:layout_marginTop="@dimen/margin_14"
+                android:text="@string/lbl_phone"
+                android:layout_below="@id/etProfileName"
+                android:textColor="@color/black"
+                android:textSize="@dimen/regular_text" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etProfilePhone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editext_size"
+                android:layout_below="@id/lblPhone"
+                android:layout_marginLeft="@dimen/margin_14"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_14"
+                android:paddingLeft="@dimen/margin_8"
+                android:background="@drawable/rectangle_shape"
+                android:text="+6509980000000"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:enabled="true"
+                android:paddingTop="@dimen/margin_4"
+                android:textSize="@dimen/regular_text"
+                android:textColor="@color/black"/>
+
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:layout_marginTop="@dimen/margin_30"
+                android:layout_marginLeft="@dimen/margin_14"
+                android:layout_marginRight="@dimen/margin_14"
+                android:layout_below="@id/etProfilePhone"
+                android:background="@drawable/rectangle_shape"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:textAllCaps="false"/>
+
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>

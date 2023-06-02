@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:elevation="@dimen/margin_8">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_4">
+
+            <TextView
+                android:id="@+id/lblSendDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginRight="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:text="Send Date : "
+                android:textColor="@color/black"
+                android:textSize="@dimen/regular_text" />
+
+            <TextView
+                android:id="@+id/tvSendDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginRight="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:layout_toRightOf="@+id/lblSendDate"
+                android:gravity="end"
+                android:text="---"
+                android:textColor="@color/black"
+                android:textSize="@dimen/regular_text" />
+
+            <TextView
+                android:id="@+id/lblAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSendDate"
+                android:layout_marginLeft="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginRight="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:text="Account :"
+                android:textColor="@color/black"
+                 />
+
+            <TextView
+                android:id="@+id/tvAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/lblAccount"
+                android:gravity="end"
+                android:layout_below="@+id/tvSendDate"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginRight="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:text="---"
+                android:textColor="@color/black"
+                android:textSize="@dimen/regular_text" />
+
+            <TextView
+                android:id="@+id/lblAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblAccount"
+                android:layout_marginLeft="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginRight="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:text="Amount : "
+                android:textColor="@color/black"
+                android:textSize="@dimen/regular_text" />
+
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAccount"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/lblAmount"
+                android:gravity="end"
+                android:layout_marginLeft="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginRight="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:text="---"
+                android:textColor="@color/black"
+                android:textSize="@dimen/regular_text" />
+
+            <TextView
+                android:id="@+id/lblStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblAmount"
+                android:layout_marginLeft="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginRight="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:text="Status : "
+                android:textColor="@color/black"
+                android:textSize="@dimen/regular_text" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblAmount"
+                android:layout_alignParentRight="true"
+                android:gravity="end"
+                android:layout_marginLeft="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginRight="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:text="Approved"
+                android:padding="@dimen/margin_4"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/black"
+                android:textSize="@dimen/regular_text" />
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.home.HomeFragment">
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome MCT"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_18"
+        android:textSize="@dimen/regular_text_18"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_18"
+        android:layout_below="@id/tvWelcome"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "User"
+        android:layout_below="@id/ivProfile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_4"
+        android:textSize="@dimen/regular_text_18"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCreditAmt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvName"
+        android:layout_marginTop="@dimen/margin_14"
+        android:layout_marginLeft="@dimen/margin_14"
+        android:layout_marginRight="@dimen/margin_14"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lblCredit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account credit amount"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/regular_text_16"
+                android:layout_marginTop="@dimen/margin_12"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$00.00"
+                android:layout_below="@id/lblCredit"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/regular_text_18"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/lblIncome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Income"
+                android:layout_below="@id/tvAmount"
+                android:layout_marginTop="@dimen/margin_12"
+                android:layout_marginLeft="@dimen/margin_14"
+                android:textSize="@dimen/regular_text_16"
+                android:textColor="@color/col_light_gray"
+                />
+
+            <TextView
+                android:id="@+id/tvIncome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00.0 SG"
+                android:layout_below="@id/lblIncome"
+                android:layout_marginTop="@dimen/margin_4"
+                android:layout_marginLeft="@dimen/margin_14"
+                android:textSize="@dimen/regular_text_18"
+                android:textColor="@color/black"
+                />
+
+            <ImageView
+                android:id="@+id/ivIncome"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/income"
+                android:layout_marginTop="@dimen/margin_12"
+                android:layout_below="@id/tvAmount"
+                android:layout_toRightOf="@id/lblIncome"/>
+
+            <ImageView
+                android:id="@+id/ivOutcome"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/outcome"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/margin_12"
+                android:layout_marginRight="@dimen/margin_14"
+                android:layout_below="@id/tvAmount"
+                />
+
+            <TextView
+                android:id="@+id/lblOutcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Outcome"
+                android:layout_below="@id/tvAmount"
+                android:layout_toLeftOf="@id/ivOutcome"
+                android:layout_marginTop="@dimen/margin_12"
+                android:layout_marginLeft="@dimen/margin_14"
+                android:textSize="@dimen/regular_text_16"
+                android:textColor="@color/col_light_gray"
+                />
+
+            <TextView
+                android:id="@+id/tvOutcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00.0 SG"
+                android:layout_below="@id/lblOutcome"
+                android:layout_marginBottom="@dimen/margin_18"
+                android:layout_toLeftOf="@id/ivOutcome"
+                android:layout_marginTop="@dimen/margin_4"
+                android:layout_marginLeft="@dimen/margin_14"
+                android:textSize="@dimen/regular_text_18"
+                android:textColor="@color/black"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvTransactionHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cvCreditAmt"
+        android:layout_marginTop="@dimen/margin_14"
+        android:layout_marginLeft="@dimen/margin_14"
+        android:layout_marginRight="@dimen/margin_14"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lblTransactionHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transaction History"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/regular_text_16"
+                android:layout_marginTop="@dimen/margin_12"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTransactionHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblTransactionHistory"
+                android:layout_marginLeft="@dimen/margin_14"
+                android:layout_marginRight="@dimen/margin_14"
+                android:layout_marginBottom="@dimen/margin_14"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

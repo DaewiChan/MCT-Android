@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.account.login.LoginActivity"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/cvMain"
+            android:text="@string/account_registration"
+            android:layout_marginBottom="@dimen/margin_14"
+            android:textSize="@dimen/regular_text_18"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/margin_14"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/lblPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_14"
+                    android:layout_marginTop="@dimen/margin_14"
+                    android:text="@string/login_lbl_phone"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/regular_text" />
+
+                <LinearLayout
+                    android:id="@+id/rlPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/editext_size"
+                    android:layout_below="@+id/lblPhone"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_14"
+                    android:layout_marginRight="@dimen/margin_14"
+                    android:background="@drawable/rectangle_shape"
+                    >
+
+                    <Spinner
+                        android:id="@+id/spPhoneCode"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="match_parent"
+                        />
+
+                    <EditText
+                        android:id="@+id/etPhoneNo"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="@dimen/editext_size"
+                        android:hint="@string/login_hint_phone"
+                        android:layout_toRightOf="@id/spPhoneCode"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:background="@android:color/transparent"
+                        android:maxLines="1"
+                        android:nextFocusForward="@id/etPassword"
+                        android:paddingLeft="@dimen/margin_8"
+                        android:textColorHint="@color/col_gray"
+                        android:textSize="@dimen/regular_text" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/lblEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlPhone"
+                    android:layout_marginLeft="@dimen/margin_14"
+                    android:layout_marginTop="@dimen/margin_14"
+                    android:text="@string/login_lbl_email"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/regular_text" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/editext_size"
+                    android:layout_below="@+id/lblEmail"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_14"
+                    android:layout_marginRight="@dimen/margin_14"
+                    android:background="@drawable/rectangle_shape"
+                    android:hint="@string/login_hint_email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:nextFocusForward="@id/etPassword"
+                    android:paddingLeft="@dimen/margin_8"
+                    android:textColorHint="@color/col_gray"
+                    android:textSize="@dimen/regular_text" />
+
+                <TextView
+                    android:id="@+id/lblCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/etEmail"
+                    android:layout_marginLeft="@dimen/margin_14"
+                    android:layout_marginTop="@dimen/margin_14"
+                    android:text="@string/login_lbl_verify_code"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/regular_text" />
+
+                <LinearLayout
+                    android:id="@+id/llCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/margin_14"
+                    android:layout_marginRight="@dimen/margin_14"
+                    android:layout_below="@id/lblCode">
+
+                    <EditText
+                        android:id="@+id/etCode"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/editext_size"
+                        android:layout_weight="1"
+                        android:background="@drawable/rectangle_shape"
+                        android:hint=""
+                        android:enabled="false"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:nextFocusForward="@id/etPassword"
+                        android:paddingLeft="@dimen/margin_8"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/regular_text" />
+
+
+                    <Button
+                        android:id="@+id/btnGetCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Get Code"
+                        android:layout_marginStart="@dimen/margin_14"
+                        android:textSize="@dimen/regular_text"
+                        android:textAllCaps="false"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/lblPassowrd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llCode"
+                    android:layout_marginLeft="@dimen/margin_14"
+                    android:layout_marginTop="@dimen/margin_18"
+                    android:text="@string/login_lbl_password"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/regular_text" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/editext_size"
+                    android:layout_below="@+id/lblPassowrd"
+                    android:layout_marginLeft="@dimen/margin_14"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_14"
+                    android:background="@drawable/rectangle_shape"
+                    android:textColorHint="@color/col_gray">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/login_hint_password"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:padding="@dimen/margin_8"
+                            android:textSize="@dimen/regular_text_16" />
+
+                        <ImageView
+                            android:id="@+id/img_eye_password"
+                            android:layout_width="@dimen/margin_30"
+                            android:layout_height="@dimen/margin_30"
+                            android:layout_gravity="end|center"
+                            android:layout_marginEnd="@dimen/margin_8"
+                            android:background="?android:attr/selectableItemBackground"
+                            app:tint="@color/black"
+                            android:visibility="invisible"
+                            app:srcCompat="@drawable/ic_visible" />
+
+                        <ImageView
+                            android:id="@+id/img_eye_password_hide"
+                            android:layout_width="@dimen/margin_30"
+                            android:layout_height="@dimen/margin_30"
+                            android:layout_gravity="end|center"
+                            android:layout_marginEnd="@dimen/margin_8"
+                            android:background="?android:attr/selectableItemBackground"
+                            app:tint="@color/black"
+                            app:srcCompat="@drawable/ic_invisible" />
+
+                    </FrameLayout>
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/lblConfirmPassowrd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tilPassword"
+                    android:layout_marginLeft="@dimen/margin_14"
+                    android:layout_marginTop="@dimen/margin_18"
+                    android:text="@string/login_lbl_confirm_password"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/regular_text" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/editext_size"
+                    android:layout_below="@+id/lblConfirmPassowrd"
+                    android:layout_marginLeft="@dimen/margin_14"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_14"
+                    android:background="@drawable/rectangle_shape"
+                    android:textColorHint="@color/col_gray">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etConfirmPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/login_hint_confirm_password"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:padding="@dimen/margin_8"
+                            android:textSize="@dimen/regular_text_16" />
+
+                        <ImageView
+                            android:id="@+id/img_eye_confrim_password"
+                            android:layout_width="@dimen/margin_30"
+                            android:layout_height="@dimen/margin_30"
+                            android:layout_gravity="end|center"
+                            android:layout_marginEnd="@dimen/margin_8"
+                            android:background="?android:attr/selectableItemBackground"
+                            app:tint="@color/black"
+                            android:visibility="invisible"
+                            app:srcCompat="@drawable/ic_visible" />
+
+                        <ImageView
+                            android:id="@+id/img_eye_confrim_password_hide"
+                            android:layout_width="@dimen/margin_30"
+                            android:layout_height="@dimen/margin_30"
+                            android:layout_gravity="end|center"
+                            android:layout_marginEnd="@dimen/margin_8"
+                            android:background="?android:attr/selectableItemBackground"
+                            app:tint="@color/black"
+                            app:srcCompat="@drawable/ic_invisible" />
+
+                    </FrameLayout>
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tilConfirmPassword"
+                    android:layout_marginLeft="@dimen/margin_12"
+                    android:layout_marginTop="@dimen/margin_30"
+                    android:layout_marginRight="@dimen/margin_12"
+                    android:layout_marginBottom="@dimen/margin_18"
+                    android:background="@drawable/rectangle_shape"
+                    app:backgroundTint="@color/colorPrimary"
+                    android:text="Register"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/regular_text_16" />
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/lblLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_has_reg_acc"
+            android:layout_below="@id/cvMain"
+            android:layout_marginTop="@dimen/margin_14"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/regular_text_16" />
+    </RelativeLayout>
+</ScrollView>
